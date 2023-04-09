@@ -66,6 +66,9 @@ public class TimSim {
       case "bully":
         bots[i] = new BullyBot( id, energy );
         break;
+      case "titan":
+        bots[i] = new TitanBot( id, energy );
+        break;
       }
 
       // Error checking (unnecessary)
