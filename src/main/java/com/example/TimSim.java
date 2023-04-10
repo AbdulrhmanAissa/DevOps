@@ -33,12 +33,19 @@ public class TimSim {
     boolean debug = ( args.length > 0 ) && args[0].equals( "debug" );
 
     // load configuration of simulation
+    System.out.println("Please enter the number of rows for DohNat Planet: ");
     int rows = stdin.nextInt();             // Number of Rows
+    System.out.println("Please enter the number of columns for DohNat Planet: ");
     int columns = stdin.nextInt();          // Number of Columns
+    System.out.println("Please enter the number of jolts: ");
     int jolts = stdin.nextInt();            // Number of Jolts
+    System.out.println("Please enter the number of growth: ");
     int growth = stdin.nextInt();           // Number of Growth
+    System.out.println("Please enter the number of rounds: ");
     int rounds = stdin.nextInt();           // Number of Rounds
+    System.out.println("Please enter the number of bots: ");
     int numBots = stdin.nextInt();          // Number of Bots
+    System.out.println("Please enter the number of plant: ");
     int numPlant = stdin.nextInt();         // Number of Plant Configuration
 
     // Instantiate planet and array of Timbots with rows, columns, jolts and growth parameters
@@ -48,10 +55,15 @@ public class TimSim {
     // Loading the Timbot configurations
     for( int i = 0; i < numBots; i++ ) {
       // Read in one timbot config
+      System.out.println("Please enter the personality of bot number " + i + ": ");
       String personality = stdin.next();
+      System.out.println("Please enter the id of the bot: ");
       int id = stdin.nextInt();
+      System.out.println("Please enter the x axis of the district which the bot will be in: ");
       int x = stdin.nextInt();
+      System.out.println("Please enter the y axis of the district which the bot will be in: ");
       int y = stdin.nextInt();
+      System.out.println("Please enter the energy of the bot: ");
       int energy = stdin.nextInt();
 
       // Insantiate the corresponding bot object.
@@ -67,9 +79,6 @@ public class TimSim {
         break;
       case "bully":
         bots[i] = new BullyBot( id, energy );
-        break;
-      case "titan":
-        bots[i] = new TitanBot( id, energy );
         break;
       }
 
@@ -88,10 +97,15 @@ public class TimSim {
     // Load the plant configurations
     for( int i = 0; i < numPlant; i++ ) {
       // Read in one plant config
+      System.out.println("Please enter the plant name: ");
       String plantName = stdin.next();               // Type of Plant e.g. Spresso, Mericano
+      System.out.println("Please enter the x axis of the district which the plant will be in: ");
       int x = stdin.nextInt();                       // X - coordinates
+      System.out.println("Please enter the y axis of the district which the plant will be in: ");
       int y = stdin.nextInt();                       // Y - coordinates
+      System.out.println("Please enter the energy that the plant provide: ");
       int energy = stdin.nextInt();                  // Energy gained
+      System.out.println("Please enter the rounds required to complete the growth of the plant: ");
       int roundForGrowth = stdin.nextInt();          // Rounds required for Completion of Growth
 
       // Insantiate the corresponding plant object.
