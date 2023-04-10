@@ -67,7 +67,7 @@
               <configuration>
                 <skip>false</skip>
                 <includes>
-                  <include>com/example/AllTests.java</include>
+                  <include>com/example/*.java</include>
                 </includes>
               </configuration>
             </execution>
