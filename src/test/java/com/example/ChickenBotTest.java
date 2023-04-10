@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ChickenBotTest {
+public class ChickenBotTest {
     /* Need to test ordering of cases:
      *  1. There are no other TimBots in the district.
      *  2. There are no TimBots in the adjacent districts.
@@ -25,7 +25,7 @@ class ChickenBotTest {
      * Blackbox
      */
     @Test
-    void getNextMoveCase0() {
+    public void getNextMoveCase0() {
         TimBot t = new ChickenBot(42, 1);
         t.startRound();
         int [] spressoSensed = {10, 0, 10, 10, 10};
@@ -39,7 +39,7 @@ class ChickenBotTest {
      * Blackbox
      */
     @Test
-    void getNextMoveCase1() {
+    public void getNextMoveCase1() {
         TimBot t = new ChickenBot(42, 2);
         t.startRound();
         int [] spressoSensed = {0, 10, 10, 10, 10};
@@ -54,7 +54,7 @@ class ChickenBotTest {
      * Blackbox
      */
     @Test
-    void getNextMoveCase2() {
+    public void getNextMoveCase2() {
         TimBot t = new ChickenBot(42, 2);
         t.startRound();
         int [] spressoSensed = {10, 0, 10, 10, 10};
@@ -68,7 +68,7 @@ class ChickenBotTest {
      * Blackbox
      */
     @Test
-    void getNextMoveCase3() {
+    public void getNextMoveCase3() {
         TimBot t = new ChickenBot(42, 2);
         t.startRound();
         int [] spressoSensed = {0, 10, 0, 0, 0};
@@ -81,7 +81,7 @@ class ChickenBotTest {
      * Blackbox
      */
     @Test
-    void getNextMoveCase4() {
+    public void getNextMoveCase4() {
         TimBot t = new ChickenBot(42, 2);
         t.startRound();
         int [] spressoSensed = {0, 00, 0, 10, 0};
@@ -94,7 +94,7 @@ class ChickenBotTest {
      * Blackbox
      */
     @Test
-    void getNextMoveCase5() {
+    public void getNextMoveCase5() {
         TimBot t = new ChickenBot(42, 2);
         t.startRound();
         int [] spressoSensed = {10, 10, 10, 10, 0};
@@ -107,7 +107,7 @@ class ChickenBotTest {
      * Blackbox
      */
     @Test
-    void getNextMoveCase6() {
+    public void getNextMoveCase6() {
         TimBot t = new ChickenBot(42, 2);
         t.startRound();
         int [] spressoSensed = {0, 0, 0, 0, 0};

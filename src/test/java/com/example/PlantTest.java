@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PlantTest {
+public class PlantTest {
 
     /* Need to test ordering of cases:
      *  1. The values that the plant is returning.
@@ -18,7 +18,7 @@ class PlantTest {
      * White-box Testing
      */
     @Test
-    void setVal() {
+    public void setVal() {
         Plant p1 = new Plant();
         p1.setVal(1,10);
         assertEquals(1, p1.getJolts(), "The value of jolts is " + p1.getJolts());
@@ -29,7 +29,7 @@ class PlantTest {
      * Black-box Testing
      */
     @Test
-    void isNotHarvested() {
+    public void isNotHarvested() {
         Plant p1 = new Plant();
         p1.isNotHarvested();
         assertTrue(p1.isNotHarvested(), "It is not harvested! ");
@@ -40,7 +40,7 @@ class PlantTest {
      * Black-box Testing
      */
     @Test
-    void setHarvested() {
+    public void setHarvested() {
         Plant p1 = new Plant();
         p1.setHarvested();
         assertFalse(p1.isNotHarvested(), "It has harvested");
@@ -52,7 +52,7 @@ class PlantTest {
      * Comment - To check this first check the "Before the counter is reset" output and then check "After the counter is reset"
      */
     @Test
-    void resetCount() {
+    public void resetCount() {
         Plant p1 = new Plant();
         p1.count = 10;
         assertEquals(10, p1.getCounter(), "Before the counter is reset");
@@ -64,7 +64,7 @@ class PlantTest {
      * Black-box
      */
     @Test
-    void setX_coord() {
+    public void setX_coord() {
         Plant p1 = new Plant();
         p1.setX_coord(5);
         assertEquals(5, p1.getX_coord(), "X co-ordinate is " + p1.getX_coord());
@@ -74,7 +74,7 @@ class PlantTest {
      * Black-box
      */
     @Test
-    void setY_coord() {
+    public void setY_coord() {
         Plant p1 = new Plant();
         p1.setY_coord(5);
         assertEquals(5, p1.getY_coord(), "Y co-ordinate is " + p1.getY_coord());

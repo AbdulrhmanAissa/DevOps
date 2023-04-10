@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SpressoPlantTest {
+public class SpressoPlantTest {
 
 
     /* Need to test ordering of cases:
@@ -18,7 +18,7 @@ class SpressoPlantTest {
      * Black-box
      */
     @Test
-    void setName() {
+    public void setName() {
         SpressoPlant sp = new SpressoPlant();
         sp.setName("Mericano Plant");
         assertEquals("Mericano Plant", sp.getName(), "Set name is " + sp.getName());
@@ -31,7 +31,7 @@ class SpressoPlantTest {
      */
 
     @Test
-    void setPlantGrowth() {
+    public void setPlantGrowth() {
         SpressoPlant sp = new SpressoPlant();
         sp.setPlantGrowth(20);
         assertEquals(20,sp.getPlantGrowth(), "The growth value is" + sp.getPlantGrowth());
@@ -42,7 +42,7 @@ class SpressoPlantTest {
     * White-box
      */
     @Test
-    void setPlantJolts() {
+    public void setPlantJolts() {
         SpressoPlant sp = new SpressoPlant();
         sp.setPlantJolts(2);
         assertEquals(2, sp.getPlantJolts(), "The plant jolts is" + sp.getPlantJolts());

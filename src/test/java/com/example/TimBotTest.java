@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
 
-class TimBotTest {
+public class TimBotTest {
     private static final boolean [] botsSensed = {true, false, true, false, true};
     private static final int [] spressoSensed = {0, 1, 2, 3, 4};
 
@@ -15,7 +15,7 @@ class TimBotTest {
      * Black-box
      */
     @Test
-    void getID() {
+    public void getID() {
         TimBot t = new TimBot(42, 1);
         assertEquals(42, t.getID(), "IDs do not match");
     }
@@ -25,7 +25,7 @@ class TimBotTest {
      * Black-box
      */
     @Test
-    void startRoundNoJolts() {
+    public void startRoundNoJolts() {
         TimBot t = new TimBot(42, 0);
         assertFalse(t.startRound(), "Timbot should be nonfunctional");
     }
@@ -34,7 +34,7 @@ class TimBotTest {
      * Black-box
      */
     @Test
-    void startRoundOneJolts() {
+    public void startRoundOneJolts() {
         TimBot t = new TimBot(42, 1);
         assertTrue(t.startRound(), "Timbot should be functional");
     }
@@ -43,7 +43,7 @@ class TimBotTest {
      * Black-box
      */
     @Test
-    void startRoundLotsOfJolts() {
+    public void startRoundLotsOfJolts() {
         TimBot t = new TimBot(42, 2);
         assertTrue(t.startRound(), "Timbot should be functional");
     }
@@ -53,7 +53,7 @@ class TimBotTest {
      *            copies the arrays
      */
     @Test
-    void senseDistricts() {
+    public void senseDistricts() {
         TimBot t = new TimBot(42, 2);
         t.startRound();
         t.senseDistricts(spressoSensed, botsSensed);
@@ -67,7 +67,7 @@ class TimBotTest {
      * White-box: Default is not to move, but the spec is silent on the default
      */
     @Test
-    void getNextMove() {
+    public void getNextMove() {
         TimBot t = new TimBot(42, 2);
         t.startRound();
         t.senseDistricts(spressoSensed, botsSensed);
@@ -79,7 +79,7 @@ class TimBotTest {
      * Black-box
      */
     @Test
-    void isFunctionalNonFunctional() {
+    public void isFunctionalNonFunctional() {
         TimBot t = new TimBot(42, -1);
         assertFalse(t.isFunctional(), "Timbot should be nonfunctional");
     }
@@ -88,7 +88,7 @@ class TimBotTest {
      * Black-box
      */
     @Test
-    void isFunctionalFunctional() {
+    public void isFunctionalFunctional() {
         TimBot t = new TimBot(42, 0);
         assertTrue(t.isFunctional(), "Timbot should be functional");
     }
@@ -97,7 +97,7 @@ class TimBotTest {
      * Black-box
      */
     @Test
-    void isFunctionalFunctional2() {
+    public void isFunctionalFunctional2() {
         TimBot t = new TimBot(42, 1);
         assertTrue(t.isFunctional(), "Timbot should be functional");
     }
@@ -106,7 +106,7 @@ class TimBotTest {
      * Black-box
      */
     @Test
-    void useShieldFails() {
+    public void useShieldFails() {
         TimBot t = new TimBot(42, 1);
         t.startRound();
         t.senseDistricts(spressoSensed, botsSensed);
@@ -120,7 +120,7 @@ class TimBotTest {
      * Black-box
      */
     @Test
-    void useShieldSucceedsOnce() {
+    public void useShieldSucceedsOnce() {
         TimBot t = new TimBot(42, 2);
         t.startRound();
         t.senseDistricts(spressoSensed, botsSensed);
@@ -136,7 +136,7 @@ class TimBotTest {
      * Black-box
      */
     @Test
-    void useShieldSucceedsTwice() {
+    public void useShieldSucceedsTwice() {
         TimBot t = new TimBot(42, 3);
         t.startRound();
         t.senseDistricts(spressoSensed, botsSensed);
@@ -151,7 +151,7 @@ class TimBotTest {
      * Grey-box.  We are accessing energyLevel directly because there is no getter
      */
     @Test
-    void harvestSpressoUnder99() {
+    public void harvestSpressoUnder99() {
         TimBot t = new TimBot(42, 1);
         t.startRound();
         t.senseDistricts(spressoSensed, botsSensed);
@@ -165,7 +165,7 @@ class TimBotTest {
      * Grey-box.  We are accessing energyLevel directly because there is no getter
      */
     @Test
-    void harvestSpressoOver99() {
+    public void harvestSpressoOver99() {
         TimBot t = new TimBot(42, 1);
         t.startRound();
         t.senseDistricts(spressoSensed, botsSensed);
@@ -179,7 +179,7 @@ class TimBotTest {
      * White-box: Default is not to fire, but the spec is silent on the default
      */
     @Test
-    void fireCannon() {
+    public void fireCannon() {
         TimBot t = new TimBot(42, 3);
         t.startRound();
         t.senseDistricts(spressoSensed, botsSensed);
@@ -191,7 +191,7 @@ class TimBotTest {
      * Black-box
      */
     @Test
-    void testToString() {
+    public void testToString() {
         TimBot t = new TimBot(42, 3);
         String s = String.format( "(%c %2d %2d)", t.personality, t.getID(),
                 t.energyLevel );
