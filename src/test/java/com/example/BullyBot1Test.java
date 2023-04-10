@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.Test;
 
-public class BullyBotTest {
+public class BullyBot1Test {
     /* Need to test :
      *  1. The BullyBot does not fire if it does not have enough energy
      *  2. The BullyBot does not fire if there is nothing to fire at
